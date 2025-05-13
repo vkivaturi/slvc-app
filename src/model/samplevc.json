@@ -1,0 +1,39 @@
+{
+  "@context": [
+    "https://www.w3.org/2018/credentials/v1"
+  ],
+  "id": "urn:uuid:f245f156-b6d0-4cb2-aec9-892d5ce390ac",
+  "type": ["VerifiableCredential", "MarriageCertificateCredential"],
+  "issuer": "did:example:temple-786",
+  "issuanceDate": "2025-05-13T10:00:00Z",
+  "expirationDate": "2025-06-13T10:00:00Z",
+
+  "credentialSubject": {
+    "id": "did:example:user-98765",
+    "name": "Ravi Sharma",
+    "document": {
+      "type": "MarriageCertificate",
+      "format": "application/pdf",
+      "url": "https://issuer.gov.in/docs/marriage/f245f156.pdf",
+      "digest": {
+        "alg": "sha256",
+        "value": "8b1a9953c4611296a827abf8c47804d7e5e0f3abf9e58f9d8fca4fdbda36c4dd"
+      },
+      "signatureType": "PKCS7",
+      "issuedOn": "2025-05-12"
+    }
+  },
+
+  "credentialStatus": {
+    "id": "https://issuer.gov.in/status/f245f156",
+    "type": "StatusList2021Entry"
+  },
+
+  "proof": {
+    "type": "Ed25519Signature2020",
+    "created": "2025-05-13T10:00:00Z",
+    "proofPurpose": "assertionMethod",
+    "verificationMethod": "did:example:temple-786#key-1",
+    "jws": "eyJhbGciOiJFZERTQSJ9..OwLqG3Z9fNNQ0kgVlvym1Ko0bsW1D..."
+  }
+}
